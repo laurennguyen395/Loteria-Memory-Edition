@@ -65,7 +65,6 @@ let setGamePlay = {
         let div1 = document.createElement('img')
         div1.setAttribute('class', 'cardContainer')
         div1.setAttribute('id', 'div1')
-        div1.setAttribute('src' , '')
         cardGrid.appendChild(div1)
 
 
@@ -177,6 +176,7 @@ let setGamePlay = {
             newCard.setAttribute('src', 'images/card' + i + '.png')
             newCard.setAttribute('value', i)
             this.rememberCards.push(newCard)
+            console.log(setGamePlay.rememberCards)
         }
     },
     shuffle: function () {
@@ -188,28 +188,45 @@ let setGamePlay = {
         }
     },
     deal: function () {
+        this.getCards()
         this.shuffle()
-        let playerCard1 = setGamePlay.rememberCards
-        let playerCard2 = setGamePlay.rememberCards
-        let playerCard3 = setGamePlay.rememberCards
-        let playerCard4 = setGamePlay.rememberCards
-        let playerCard5 = setGamePlay.rememberCards
-        let playerCard6 = setGamePlay.rememberCards
-        let playerCard7 = setGamePlay.rememberCards
-        let playerCard8 = setGamePlay.rememberCards
-        let playerCard9 = setGamePlay.rememberCards
-        let playerCard10 = setGamePlay.rememberCards
-        let playerCard11 = setGamePlay.rememberCards
-        let playerCard12 = setGamePlay.rememberCards
-        let playerCard13 = setGamePlay.rememberCards
-        let playerCard14 = setGamePlay.rememberCards
-        let playerCard15 = setGamePlay.rememberCards
-        let playerCard16 = setGamePlay.rememberCards
-        let playerCard17 = setGamePlay.rememberCards
-        let playerCard18 = setGamePlay.rememberCards
+        let playerCard1 = setGamePlay.rememberCards.shift()
+        let playerCard2 = setGamePlay.rememberCards.shift()
+        let playerCard3 = setGamePlay.rememberCards.shift()
+        let playerCard4 = setGamePlay.rememberCards.shift()
+        let playerCard5 = setGamePlay.rememberCards.shift()
+        let playerCard6 = setGamePlay.rememberCards.shift()
+        let playerCard7 = setGamePlay.rememberCards.shift()
+        let playerCard8 = setGamePlay.rememberCards.shift()
+        let playerCard9 = setGamePlay.rememberCards.shift()
+        let playerCard10 = setGamePlay.rememberCards.shift()
+        let playerCard11 = setGamePlay.rememberCards.shift()
+        let playerCard12 = setGamePlay.rememberCards.shift()
+        let playerCard13 = setGamePlay.rememberCards.shift()
+        let playerCard14 = setGamePlay.rememberCards.shift()
+        let playerCard15 = setGamePlay.rememberCards.shift()
+        let playerCard16 = setGamePlay.rememberCards.shift()
+        let playerCard17 = setGamePlay.rememberCards.shift()
+        let playerCard18 = setGamePlay.rememberCards.shift()
 
-        div1.setAttribute('src', 'images/card2.png')
-
+        div1.setAttribute('src', playerCard1.getAttribute('src'))
+        div2.setAttribute('src', playerCard2.getAttribute('src'))
+        div3.setAttribute('src', playerCard3.getAttribute('src'))
+        div4.setAttribute('src', playerCard4.getAttribute('src'))
+        div5.setAttribute('src', playerCard5.getAttribute('src'))
+        div6.setAttribute('src', playerCard6.getAttribute('src'))
+        div7.setAttribute('src', playerCard7.getAttribute('src'))
+        div8.setAttribute('src', playerCard8.getAttribute('src'))
+        div9.setAttribute('src', playerCard9.getAttribute('src'))
+        div10.setAttribute('src', playerCard10.getAttribute('src'))
+        div11.setAttribute('src', playerCard11.getAttribute('src'))
+        div12.setAttribute('src', playerCard12.getAttribute('src'))
+        div13.setAttribute('src', playerCard13.getAttribute('src'))
+        div14.setAttribute('src', playerCard14.getAttribute('src'))
+        div15.setAttribute('src', playerCard15.getAttribute('src'))
+        div16.setAttribute('src', playerCard16.getAttribute('src'))
+        div17.setAttribute('src', playerCard17.getAttribute('src'))
+        div18.setAttribute('src', playerCard18.getAttribute('src'))
     },
     
 }
