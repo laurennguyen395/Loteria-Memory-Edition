@@ -171,7 +171,7 @@ let setGamePlay = {
     rememberCards: [],
 
     getCards: function () {
-        for (let i = 1; i <= 18; i++) {
+        for (let i = 1; i <= 7; i++) {
             const newCard = document.createElement('img')
             newCard.setAttribute('src', 'images/card' + i + '.png')
             newCard.setAttribute('value', i)
