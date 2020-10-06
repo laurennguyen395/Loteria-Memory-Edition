@@ -1,3 +1,4 @@
+
 body {
     display: flex;
     align-items: center;
@@ -5,6 +6,10 @@ body {
     background: radial-gradient(rgb(118, 152, 157),rgb(197, 208, 202));
     justify-content: center;
     margin-top: auto;
+    align-items: center;
+    display:absolute;
+    margin-top: 10%;
+    margin-bottom: 10%;
   }
 
 .startButton {
@@ -33,6 +38,15 @@ p{
     color: aliceblue;
     font-size: 25px;
 }
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 700px;
+    width: 1000px;
+}
+
+
 @media(max-width:500px){
     body{
     display: flex;
