@@ -1,15 +1,13 @@
 
 body {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    /*display: flex;
+    /* align-items: center; */
+    /* flex-direction: column; */
     background: radial-gradient(rgb(118, 152, 157),rgb(197, 208, 202));
-    justify-content: center;
+    /* justify-content: center; */
     margin-top: auto;
-    align-items: center;
-    display:absolute;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    /* align-items: center; */
+   
   }
 
 .startButton {
@@ -21,17 +19,23 @@ body {
     margin: 20px;
     transition: all 0.5s ease-in-out;
     font-size: 45px;
-    color: rgb(118, 152, 157);
+    color: rgb(118, 152, 157); 
+    
+}
+.stBtnContainer{
+    text-align: center;
 }
 h3 {
     font-size: 30px;
     margin-top: 0;
     color: aliceblue;
+    text-align: center;
 }
 h1{
     font-size: 85px;
     color: aliceblue;
     margin-bottom: 0px;
+    text-align: center;
 }
 p{
     text-align: center;
@@ -39,21 +43,130 @@ p{
     font-size: 25px;
 }
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 700px;
+    height: 800px;
     width: 1000px;
+    margin: 0px 200px
 }
+.parent {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 5px;
+    position: relative;
+    top: 40px; 
+    }
+    
+    #div1 { 
+        grid-area: 1 / 1 / 2 / 2; 
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px;
+    }
+    #div2 { 
+        grid-area: 1 / 2 / 2 / 3;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px;
+     }
+    #div3 { grid-area: 1 / 3 / 2 / 4;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px; }
+    #div4 { grid-area: 1 / 4 / 2 / 5;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px; }
+    #div5 { grid-area: 1 / 5 / 2 / 6;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px; }
+    #div6 { grid-area: 1 / 6 / 2 / 7;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px; }
+    #div7 { grid-area: 2 / 1 / 3 / 2;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px; }
+    #div8 { grid-area: 2 / 2 / 3 / 3;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px; }
+    #div9 { grid-area: 2 / 3 / 3 / 4;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px; }
+    #div10 { grid-area: 2 / 4 / 3 / 5;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px;} 
+    #div11 { grid-area: 2 / 5 / 3 / 6;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px;}
+    #div12 { grid-area: 2 / 6 / 3 / 7;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px;}
+    #div13 { grid-area: 3 / 1 / 4 / 2;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px;}
 
+    #div14 { grid-area: 3 / 2 / 4 / 3;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px;}
+    #div15 { grid-area: 3 / 3 / 4 / 4;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px;}
+    #div16 { grid-area: 3 / 4 / 4 / 5;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px;}
+    #div17 { grid-area: 3 / 5 / 4 / 6;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px;}
+    #div18 { grid-area: 3 / 6 / 4 / 7;
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px;}
+
+    .fifteenSeconds{
+        text-align: center;
+    }
 
 @media(max-width:500px){
     body{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    /* display: flex; */
+    /* align-items: center; */
+    /* flex-direction: column; */
     background: radial-gradient(rgb(118, 152, 157),rgb(197, 208, 202));
     justify-content: center;
     font-size: 22px;
+    }
+    .parent{
+        display: 100%;
     }
 }
