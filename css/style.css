@@ -1,13 +1,7 @@
 
 body {
-    /*display: flex;
-    /* align-items: center; */
-    /* flex-direction: column; */
     background: radial-gradient(rgb(118, 152, 157),rgb(197, 208, 202));
-    /* justify-content: center; */
     margin-top: auto;
-    /* align-items: center; */
-   
   }
 
 .startButton {
@@ -157,7 +151,13 @@ p{
     .fifteenSeconds{
         text-align: center;
     }
-
+    .computerChoiceImgCnt{
+        border: dotted;
+        border-color:aliceblue;
+        height: 235px;
+        width: 150px;
+        
+    }
     .readyButton{
     width: 235px;
     height: 90px;
@@ -173,6 +173,9 @@ p{
 
     .readyBtnContainer{
         text-align: center;
+    }
+    .hidden{
+        display: none;
     }
 
 @media(max-width:500px){
