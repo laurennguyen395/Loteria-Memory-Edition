@@ -45,7 +45,7 @@ p{
 .container {
     height: 800px;
     width: 1000px;
-    margin: 0px 200px
+    margin: 0px 500px
 }
 .parent {
     display: grid;
@@ -153,7 +153,25 @@ p{
         height: 235px;
         width: 150px;}
 
+
     .fifteenSeconds{
+        text-align: center;
+    }
+
+    .readyButton{
+    width: 235px;
+    height: 90px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    margin: 20px;
+    transition: all 0.5s ease-in-out;
+    font-size: 45px;
+    color: rgb(118, 152, 157); 
+    text-align: center;
+    }
+
+    .readyBtnContainer{
         text-align: center;
     }
 
