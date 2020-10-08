@@ -57,6 +57,7 @@ let setGamePlay = {
 
                 const cpuCardChoice = this.rememberCards[Math.floor(Math.random() * this.rememberCards.length)]
                 computerChoiceImgCnt.setAttribute('src', cpuCardChoice.getAttribute('src'))
+                computerChoiceImgCnt.setAttribute('value', cpuCardChoice.getAttribute('value'))
 
                 //NEXT STEPS: Loop through container, hide the cards add background color??
 
@@ -93,7 +94,7 @@ let setGamePlay = {
             }
             //get it to show up on the DOM
             document.querySelector('.fifteenSeconds').innerHTML = `Timer: ${timer}s`
-        }, 100)
+        }, 10)
     },
 
     setTable: function () {
@@ -352,7 +353,7 @@ let setGamePlay = {
             }
             //get it to show up on the DOM
             document.querySelector('.thirtySeconds').innerHTML = `Timer: ${timer2}s`
-        }, 10)
+        }, 1000)
     },
 
 
