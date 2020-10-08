@@ -94,7 +94,7 @@ let setGamePlay = {
             }
             //get it to show up on the DOM
             document.querySelector('.fifteenSeconds').innerHTML = `Timer: ${timer}s`
-        }, 100)
+        }, 1000)
     },
 
     setTable: function () {
@@ -343,7 +343,7 @@ let setGamePlay = {
         const timerInterval2 = setInterval(() => {
 
             if (timer2 === 0) {
-
+                alert('Game Over')
 
                 clearInterval(timerInterval2)
 
@@ -353,7 +353,7 @@ let setGamePlay = {
             }
             //get it to show up on the DOM
             document.querySelector('.thirtySeconds').innerHTML = `Timer: ${timer2}s`
-        }, 100)
+        }, 1000)
     },
 
 
