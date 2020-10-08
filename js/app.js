@@ -3,7 +3,7 @@ console.log('hello')
 
 // The landing page HTML to disapepar - setPage() ???
 
-let playerCardResultString, playerCardResultString2,playerCardResultString18
+let playerCardResultString, playerCardResultString2, playerCardResultString18, playerCardResult, cpuCardChoiceValue
 
 let setGamePlay = {
     cpuChoice: 0,
@@ -35,7 +35,7 @@ let setGamePlay = {
 
             if (timer === 0) {
 
-                console.log('Find all of the card values')
+                //console.log('Find all of the card values')
 
                 const removeCont = document.querySelector('.container')
                 removeCont.classList.add('hidden')
@@ -55,20 +55,20 @@ let setGamePlay = {
                 document.body.appendChild(computerChoiceImgCnt)
 
 
+
+                //COMPUTER CARD CHOICE
                 const cpuCardChoice = this.rememberCards[Math.floor(Math.random() * this.rememberCards.length)]
                 computerChoiceImgCnt.setAttribute('src', cpuCardChoice.getAttribute('src'))
                 computerChoiceImgCnt.setAttribute('value', cpuCardChoice.getAttribute('value'))
 
-                //NEXT STEPS: Loop through container, hide the cards add background color??
+
+                let cpuCardChoiceValue = parseInt(cpuCardChoice.getAttribute('value'))
+                cpuCardChoiceValueToString = cpuCardChoiceValue.toString()
 
 
-                /*            
-                                    this.getCards()
-                                    this.shuffle()
-                                    let computerCard = setGamePlay.rememberCards.shift()
-                                    computerChoiceImgCn.setAttribute('src', computerCard.getAttribute('src'))*/
 
 
+                console.log((cpuCardChoiceValueToString))
 
 
                 const readyBtnContainer = document.querySelector('div')
@@ -90,11 +90,11 @@ let setGamePlay = {
                 // find and calculate total.
             } else {
                 timer--
-                console.log(timer)
+                //console.log(timer)
             }
             //get it to show up on the DOM
             document.querySelector('.fifteenSeconds').innerHTML = `Timer: ${timer}s`
-        }, 10)
+        }, 100)
     },
 
     setTable: function () {
@@ -128,7 +128,7 @@ let setGamePlay = {
             newCard.setAttribute('value', i)
             newCard.value = i
             this.rememberCards.push(newCard)
-            console.log(setGamePlay.rememberCards)
+            //console.log(setGamePlay.rememberCards)
         }
     },
     shuffle: function () {
@@ -220,97 +220,97 @@ let setGamePlay = {
         div18.setAttribute('src', playerCard18.getAttribute('src'))
         div18.setAttribute('value', playerCard18.getAttribute('value'))
 
-        
-        
+
+
         playerCardResult = parseInt(playerCard1.getAttribute('value'))
-        console.log(typeof(playerCardResult))
+        //console.log((playerCardResult))
         playerCardResultString = playerCardResult.toString()
-        console.log(typeof(playerCardResultString))
+        console.log((playerCardResultString))
 
         playerCardResult2 = parseInt(playerCard2.getAttribute('value'))
-        console.log(typeof(playerCardResult2))
+        //console.log(typeof(playerCardResult2))
         playerCardResultString2 = playerCardResult2.toString()
-        console.log(typeof(playerCardResultString2))
+        //console.log(typeof(playerCardResultString2))
 
         playerCardResult3 = parseInt(playerCard3.getAttribute('value'))
-        console.log(typeof(playerCardResult))
+        //console.log(typeof(playerCardResult))
         playerCardResultString3 = playerCardResult3.toString()
-        console.log(typeof(playerCardResultString3))
+        //console.log(typeof(playerCardResultString3))
 
         playerCardResult4 = parseInt(playerCard4.getAttribute('value'))
-        console.log(typeof(playerCardResult4))
+        //console.log(typeof(playerCardResult4))
         playerCardResultString4 = playerCardResult4.toString()
-        console.log(typeof(playerCardResultString4))
+        //console.log(typeof(playerCardResultString4))
 
         playerCardResult5 = parseInt(playerCard5.getAttribute('value'))
-        console.log(typeof(playerCardResult5))
+        //console.log(typeof(playerCardResult5))
         playerCardResultString5 = playerCardResult5.toString()
-        console.log(typeof(playerCardResultString5))
+        //console.log(typeof(playerCardResultString5))
 
         playerCardResult6 = parseInt(playerCard6.getAttribute('value'))
-        console.log(typeof(playerCardResult6))
+        //console.log(typeof(playerCardResult6))
         playerCardResultString6 = playerCardResult6.toString()
-        console.log(typeof(playerCardResultString6))
+        //console.log(typeof(playerCardResultString6))
 
         playerCardResult7 = parseInt(playerCard7.getAttribute('value'))
-        console.log(typeof(playerCardResult7))
+        //console.log(typeof(playerCardResult7))
         playerCardResultString7 = playerCardResult7.toString()
-        console.log(typeof(playerCardResultString7))
+        //console.log(typeof(playerCardResultString7))
 
         playerCardResult8 = parseInt(playerCard8.getAttribute('value'))
-        console.log(typeof(playerCardResult8))
+        //console.log(typeof(playerCardResult8))
         playerCardResultString8 = playerCardResult8.toString()
-        console.log(typeof(playerCardResultString8))
+        //console.log(typeof(playerCardResultString8))
 
         playerCardResult9 = parseInt(playerCard9.getAttribute('value'))
-        console.log(typeof(playerCardResult9))
+        //console.log(typeof(playerCardResult9))
         playerCardResultString9 = playerCardResult9.toString()
-        console.log(typeof(playerCardResultString9))
+        //console.log(typeof(playerCardResultString9))
 
         playerCardResult10 = parseInt(playerCard10.getAttribute('value'))
-        console.log(typeof(playerCardResult10))
+        //console.log(typeof(playerCardResult10))
         playerCardResultString10 = playerCardResult10.toString()
-        console.log(typeof(playerCardResultString10))
+        //console.log(typeof(playerCardResultString10))
 
         playerCardResult11 = parseInt(playerCard11.getAttribute('value'))
-        console.log(typeof(playerCardResult11))
+        //console.log(typeof(playerCardResult11))
         playerCardResultString11 = playerCardResult11.toString()
-        console.log(typeof(playerCardResultString11))
+        //console.log(typeof(playerCardResultString11))
 
         playerCardResult12 = parseInt(playerCard12.getAttribute('value'))
-        console.log(typeof(playerCardResult12))
+        //console.log(typeof(playerCardResult12))
         playerCardResultString12 = playerCardResult12.toString()
-        console.log(typeof(playerCardResultString12))
+        //console.log(typeof(playerCardResultString12))
 
         playerCardResult13 = parseInt(playerCard13.getAttribute('value'))
-        console.log(typeof(playerCardResult13))
+        //console.log(typeof(playerCardResult13))
         playerCardResultString13 = playerCardResult13.toString()
-        console.log(typeof(playerCardResultString13))
+        //console.log(typeof(playerCardResultString13))
 
         playerCardResult14 = parseInt(playerCard14.getAttribute('value'))
-        console.log(typeof(playerCardResult14))
+        //console.log(typeof(playerCardResult14))
         playerCardResultString14 = playerCardResult14.toString()
-        console.log(typeof(playerCardResultString14))
+        //console.log(typeof(playerCardResultString14))
 
         playerCardResult15 = parseInt(playerCard15.getAttribute('value'))
-        console.log(typeof(playerCardResult15))
+        //console.log(typeof(playerCardResult15))
         playerCardResultString15 = playerCardResult15.toString()
-        console.log(typeof(playerCardResultString15))
+        //console.log(typeof(playerCardResultString15))
 
         playerCardResult16 = parseInt(playerCard16.getAttribute('value'))
-        console.log(typeof(playerCardResult16))
+        //console.log(typeof(playerCardResult16))
         playerCardResultString16 = playerCardResult16.toString()
-        console.log(typeof(playerCardResultString16))
+        //console.log(typeof(playerCardResultString16))
 
         playerCardResult17 = parseInt(playerCard17.getAttribute('value'))
-        console.log(typeof(playerCardResult17))
+        //console.log(typeof(playerCardResult17))
         playerCardResultString17 = playerCardResult.toString()
-        console.log(typeof(playerCardResultString17))
+        //console.log(typeof(playerCardResultString17))
 
         playerCardResult18 = parseInt(playerCard18.getAttribute('value'))
-        console.log(typeof(playerCardResult18))
-        playerCardResultString18= playerCardResult18.toString()
-        console.log(typeof(playerCardResultString18))
+        //console.log(typeof(playerCardResult18))
+        playerCardResultString18 = playerCardResult18.toString()
+        //console.log(typeof(playerCardResultString18))
     },
 
     setTable2: function () {
@@ -349,11 +349,11 @@ let setGamePlay = {
 
             } else {
                 timer2--
-                console.log(timer2)
+                //console.log(timer2)
             }
             //get it to show up on the DOM
             document.querySelector('.thirtySeconds').innerHTML = `Timer: ${timer2}s`
-        }, 1000)
+        }, 100)
     },
 
 
@@ -362,85 +362,121 @@ let setGamePlay = {
     imageClick: function () {
         const div1Click = document.querySelector('#div1')
         div1Click.setAttribute('src', 'images/back.png')
-        div1Click.addEventListener('click', () => { document.querySelector('#div1').setAttribute('src', 'images/card' + playerCardResultString + '.png') })
+        div1Click.addEventListener('click', () => { document.querySelector('#div1').setAttribute('src', 'images/card' + playerCardResultString + '.png') }, this.compareValues())
 
         const div2Click = document.querySelector('#div2')
         div2Click.setAttribute('src', 'images/back.png')
-        div2Click.addEventListener('click', () => { document.querySelector('#div2').setAttribute('src', 'images/card' + playerCardResultString2 + '.png') })
+        div2Click.addEventListener('click', () => { document.querySelector('#div2').setAttribute('src', 'images/card' + playerCardResultString2 + '.png'), this.compareValues() })
 
         const div3Click = document.querySelector('#div3')
         div3Click.setAttribute('src', 'images/back.png')
-        div3Click.addEventListener('click', () => {document.querySelector('#div3').setAttribute('src', 'images/card' + playerCardResultString3 + '.png') })
+        div3Click.addEventListener('click', () => { document.querySelector('#div3').setAttribute('src', 'images/card' + playerCardResultString3 + '.png'), this.compareValues() })
 
         const div4Click = document.querySelector('#div4')
         div4Click.setAttribute('src', 'images/back.png')
-        div4Click.addEventListener('click', () => {document.querySelector('#div4').setAttribute('src', 'images/card' + playerCardResultString4 + '.png') })
+        div4Click.addEventListener('click', () => { document.querySelector('#div4').setAttribute('src', 'images/card' + playerCardResultString4 + '.png'), this.compareValues() })
 
         const div5Click = document.querySelector('#div5')
         div5Click.setAttribute('src', 'images/back.png')
-        div5Click.addEventListener('click', () => {document.querySelector('#div5').setAttribute('src', 'images/card' + playerCardResultString5 + '.png') })
+        div5Click.addEventListener('click', () => { document.querySelector('#div5').setAttribute('src', 'images/card' + playerCardResultString5 + '.png'), this.compareValues() })
 
         const div6Click = document.querySelector('#div6')
         div6Click.setAttribute('src', 'images/back.png')
-        div6Click.addEventListener('click', () =>{document.querySelector('#div6').setAttribute('src', 'images/card' + playerCardResultString6 + '.png') } )
+        div6Click.addEventListener('click', () => { document.querySelector('#div6').setAttribute('src', 'images/card' + playerCardResultString6 + '.png'), this.compareValues() })
 
         const div7Click = document.querySelector('#div7')
         div7Click.setAttribute('src', 'images/back.png')
-        div7Click.addEventListener('click', () => {document.querySelector('#div7').setAttribute('src', 'images/card' + playerCardResultString7 + '.png') })
+        div7Click.addEventListener('click', () => { document.querySelector('#div7').setAttribute('src', 'images/card' + playerCardResultString7 + '.png'), this.compareValues() })
 
         const div8Click = document.querySelector('#div8')
         div8Click.setAttribute('src', 'images/back.png')
-        div8Click.addEventListener('click', () => {document.querySelector('#div8').setAttribute('src', 'images/card' + playerCardResultString8 + '.png') })
+        div8Click.addEventListener('click', () => { document.querySelector('#div8').setAttribute('src', 'images/card' + playerCardResultString8 + '.png') , this.compareValues()})
 
         const div9Click = document.querySelector('#div9')
         div9Click.setAttribute('src', 'images/back.png')
-        div9Click.addEventListener('click', () => {document.querySelector('#div9').setAttribute('src', 'images/card' + playerCardResultString9 + '.png') })
+        div9Click.addEventListener('click', () => { document.querySelector('#div9').setAttribute('src', 'images/card' + playerCardResultString9 + '.png') , this.compareValues()})
 
         const div10Click = document.querySelector('#div10')
         div10Click.setAttribute('src', 'images/back.png')
-        div10Click.addEventListener('click', () => {document.querySelector('#div10').setAttribute('src', 'images/card' + playerCardResultString10 + '.png') })
+        div10Click.addEventListener('click', () => { document.querySelector('#div10').setAttribute('src', 'images/card' + playerCardResultString10 + '.png'), this.compareValues() })
 
         const div11Click = document.querySelector('#div11')
         div11Click.setAttribute('src', 'images/back.png')
-        div11Click.addEventListener('click', () =>{document.querySelector('#div11').setAttribute('src', 'images/card' + playerCardResultString11 + '.png') } )
+        div11Click.addEventListener('click', () => { document.querySelector('#div11').setAttribute('src', 'images/card' + playerCardResultString11 + '.png') , this.compareValues()})
 
         const div12Click = document.querySelector('#div12')
         div12Click.setAttribute('src', 'images/back.png')
-        div12Click.addEventListener('click', () => {document.querySelector('#div12').setAttribute('src', 'images/card' + playerCardResultString12 + '.png') })
+        div12Click.addEventListener('click', () => { document.querySelector('#div12').setAttribute('src', 'images/card' + playerCardResultString12 + '.png') , this.compareValues()})
 
         const div13Click = document.querySelector('#div13')
         div13Click.setAttribute('src', 'images/back.png')
-        div13Click.addEventListener('click', () => {document.querySelector('#div13').setAttribute('src', 'images/card' + playerCardResultString13 + '.png') })
+        div13Click.addEventListener('click', () => { document.querySelector('#div13').setAttribute('src', 'images/card' + playerCardResultString13 + '.png'), this.compareValues() })
 
         const div14Click = document.querySelector('#div14')
         div14Click.setAttribute('src', 'images/back.png')
-        div14Click.addEventListener('click', () =>{document.querySelector('#div14').setAttribute('src', 'images/card' + playerCardResultString14 + '.png') } )
+        div14Click.addEventListener('click', () => { document.querySelector('#div14').setAttribute('src', 'images/card' + playerCardResultString14 + '.png') , this.compareValues()})
 
         const div15Click = document.querySelector('#div15')
         div15Click.setAttribute('src', 'images/back.png')
-        div15Click.addEventListener('click', () => {document.querySelector('#div15').setAttribute('src', 'images/card' + playerCardResultString15 + '.png') })
+        div15Click.addEventListener('click', () => { document.querySelector('#div15').setAttribute('src', 'images/card' + playerCardResultString15 + '.png') , this.compareValues()})
 
         const div16Click = document.querySelector('#div16')
         div16Click.setAttribute('src', 'images/back.png')
-        div16Click.addEventListener('click', () => {document.querySelector('#div16').setAttribute('src', 'images/card' + playerCardResultString16 + '.png') })
+        div16Click.addEventListener('click', () => { document.querySelector('#div16').setAttribute('src', 'images/card' + playerCardResultString16 + '.png') , this.compareValues()})
 
         const div17Click = document.querySelector('#div17')
         div17Click.setAttribute('src', 'images/back.png')
-        div17Click.addEventListener('click', () => {document.querySelector('#div17').setAttribute('src', 'images/card' + playerCardResultString17 + '.png') })
+        div17Click.addEventListener('click', () => { document.querySelector('#div17').setAttribute('src', 'images/card' + playerCardResultString17 + '.png') , this.compareValues()})
 
         const div18Click = document.querySelector('#div18')
         div18Click.setAttribute('src', 'images/back.png')
-        div18Click.addEventListener('click', () => {document.querySelector('#div18').setAttribute('src', 'images/card' + playerCardResultString18 + '.png') })
+        div18Click.addEventListener('click', () => { document.querySelector('#div18').setAttribute('src', 'images/card' + playerCardResultString18 + '.png'), this.compareValues() })
 
 
     },
 
-    getValue: function () {
-        const getDiv1Value = document.getElementById('div1').getAttribute('value')
-        getDiv1Value.setAttribute('src' , `images/card${getDiv1Value}.png`)
-    }
     //remember cpuCard Value
-
+    compareValues: function () {
+        if (cpuCardChoiceValueToString === playerCardResultString) {
+            console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString2) {
+        //     console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString3) {
+        //     console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString4) {
+        //     console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString5) {
+        //     console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString6) {
+        //     console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString7) {
+        //     console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString8) {
+        //     console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString9) {
+        //     console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString10) {
+        //     console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString11) {
+        //     console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString12) {
+        //     console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString13) {
+        //     console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString14) {
+        //     console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString15) {
+        //     console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString16) {
+        //     console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString17) {
+        //     console.log('ITS A MATCH')
+        // } else if (cpuCardChoiceValueToString === playerCardResultString18) {
+        //     console.log('ITS A MATCH')
+        } else {
+            console.log('TRY AGAIN')
+        }
+    }
 }
 console.log(setGamePlay.getCards())
 
