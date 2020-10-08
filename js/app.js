@@ -56,6 +56,10 @@ let setGamePlay = {
 
                 document.body.appendChild(computerChoiceImgCnt)
 
+                const instructions = document.createElement('p')
+                instructions.setAttribute('class' , 'instructions')
+                document.body.appendChild(instructions)
+                document.querySelector('.instructions').innerHTML = 'Choose wisely, if you mess up, you start over. Hit done when you think you got them all. Good luck.'
 
 
                 //COMPUTER CARD CHOICE
@@ -96,7 +100,7 @@ let setGamePlay = {
             }
             //get it to show up on the DOM
             document.querySelector('.fifteenSeconds').innerHTML = `Timer: ${timer}s`
-        }, 10)
+        }, 1000)
     },
 
     setTable: function () {
@@ -319,7 +323,17 @@ let setGamePlay = {
         doneButton.setAttribute('class', 'doneButton')
         document.body.appendChild(doneButton)
         document.querySelector('.doneButton').innerHTML = 'Done'
+        document.querySelector('.doneButton').addEventListener('click' , () => setGamePlay.displayAllCards())
     },
+    displayAllCards: function () {
+        const selectAllCards = document.querySelectorAll('.cardContainer')
+        for (let i = 0; i < selectAllCards.length; i++) {
+            //console.log(selectAllCards[i])
+            //console.log(selectAllCards[i].getAttribute('value'))
+            selectAllCards[i].setAttribute('src' , `images/card${selectAllCards[i].getAttribute('value')}.png`)
+        }
+    },
+
     setTable2: function () {
 
         const showCont = document.querySelector('.container')
@@ -398,14 +412,17 @@ let setGamePlay = {
 
         }
         //play correct sound
-    }
-}
+    },
+    
+   
+   }
 
 console.log(setGamePlay.getCards())
 
 
-
+//START BUTTON
 document.querySelector('.startButton').addEventListener('click', () => { setGamePlay.clearPage(), setGamePlay.setTable(), setGamePlay.setInterval1(), setGamePlay.deal() })
+
 
 
 
