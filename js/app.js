@@ -72,7 +72,7 @@ let setGamePlay = {
 
                 console.log((cpuCardChoiceValueToString))
 
-
+                //READY BUTTON
                 const readyBtnContainer = document.querySelector('div')
                 readyBtnContainer.setAttribute('class', 'readyBtnContainer')
                 document.body.appendChild(readyBtnContainer)
@@ -81,7 +81,7 @@ let setGamePlay = {
                 readyButton.setAttribute('class', 'readyButton')
                 readyBtnContainer.appendChild(readyButton)
                 document.querySelector('.readyButton').innerHTML = 'Ready'
-                document.querySelector('.readyButton').addEventListener('click', () => { setGamePlay.setTable2(), setGamePlay.setInterval2(), setGamePlay.imageClick() })
+                document.querySelector('.readyButton').addEventListener('click', () => { setGamePlay.setTable2(), setGamePlay.setInterval2(), setGamePlay.imageClick(), setGamePlay.setDoneButton() })
 
 
                 clearInterval(timerInterval)
@@ -96,7 +96,7 @@ let setGamePlay = {
             }
             //get it to show up on the DOM
             document.querySelector('.fifteenSeconds').innerHTML = `Timer: ${timer}s`
-        }, 100)
+        }, 10)
     },
 
     setTable: function () {
@@ -227,7 +227,7 @@ let setGamePlay = {
         playerCardResult = parseInt(playerCard1.getAttribute('value'))
         //console.log((playerCardResult))
         playerCardResultString = playerCardResult.toString()
-        console.log((playerCardResultString))
+        //console.log((playerCardResultString))
 
         playerCardResult2 = parseInt(playerCard2.getAttribute('value'))
         //console.log(typeof(playerCardResult2))
@@ -314,7 +314,11 @@ let setGamePlay = {
         playerCardResultString18 = playerCardResult18.toString()
         //console.log(typeof(playerCardResultString18))
     },
-
+    setDoneButton: function () {
+        const doneButton = document.createElement('button')
+        doneButton.setAttribute('class', 'doneButton')
+        document.body.appendChild(doneButton)
+    },
     setTable2: function () {
 
         const showCont = document.querySelector('.container')
@@ -345,8 +349,8 @@ let setGamePlay = {
         const timerInterval2 = setInterval(() => {
 
             if (timer2 === 0) {
-                
-                
+
+
                 //alert('GAME OVER! How did you do?')
 
                 clearInterval(timerInterval2)
@@ -357,7 +361,7 @@ let setGamePlay = {
             }
             //get it to show up on the DOM
             document.querySelector('.thirtySeconds').innerHTML = `Timer: ${timer2}s`
-        }, 100)
+        }, 1000)
     },
 
 
@@ -382,17 +386,18 @@ let setGamePlay = {
         const playValue = e.target.getAttribute('value')
         const playValueNum = parseInt(playValue)
         e.target.setAttribute('src', `images/card${playValueNum}.png`)
-        console.log(cpuCardChoiceValue)
-        console.log(playValueNum)
-        if (cpuCardChoiceValue !== playValueNum) {
-            console.log('try again')
-            setGamePlay.playSound2()
-            setTimeout(function () { setGamePlay.imageClick() }, 800);
+        //console.log(cpuCardChoiceValue)
+        //console.log(playValueNum)
+        if (cpuCardChoiceValue === playValueNum) {
+            //console.log('its a match')
+            setGamePlay.playSound1()
+
             //set time out which will flip back
             //play wrong sound
         } else {
-            console.log('its a match')
-            setGamePlay.playSound1()
+            //console.log('try again')
+            setGamePlay.playSound2()
+            setTimeout(function () { setGamePlay.imageClick() }, 800);
 
         }
         //play correct sound
