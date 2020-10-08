@@ -85,7 +85,7 @@ let setGamePlay = {
                 readyButton.setAttribute('class', 'readyButton')
                 readyBtnContainer.appendChild(readyButton)
                 document.querySelector('.readyButton').innerHTML = 'Ready'
-                document.querySelector('.readyButton').addEventListener('click', () => { setGamePlay.setTable2(), setGamePlay.setInterval2(), setGamePlay.imageClick(), setGamePlay.setDoneButton() })
+                document.querySelector('.readyButton').addEventListener('click', () => { setGamePlay.setTable2(), setGamePlay.setInterval2(), setGamePlay.imageClick(), setGamePlay.setDoneButton(), setGamePlay.clearInstructionsParagraph() })
 
 
                 clearInterval(timerInterval)
@@ -102,7 +102,10 @@ let setGamePlay = {
             document.querySelector('.fifteenSeconds').innerHTML = `Timer: ${timer}s`
         }, 1000)
     },
-
+    clearInstructionsParagraph: function () {
+        const removeInstructions = document.querySelector('.instructions')
+        removeInstructions.parentNode.removeChild(removeInstructions)
+    },
     setTable: function () {
         this.getCards()
         const container = document.createElement('div')
@@ -361,7 +364,7 @@ let setGamePlay = {
 
             if (timer2 === 0) {
 
-
+                this.displayAllCards()
                 //alert('GAME OVER! How did you do?')
 
                 clearInterval(timerInterval2)
