@@ -91,7 +91,7 @@ let setGamePlay = {
             }
             //get it to show up on the DOM
             document.querySelector('.fifteenSeconds').innerHTML = `Timer: ${timer}s`
-        }, 10)
+        }, 100)
     },
 
     setTable: function () {
@@ -217,8 +217,8 @@ let setGamePlay = {
         div18.setAttribute('src', playerCard18.getAttribute('src'))
         div18.setAttribute('value', playerCard18.getAttribute('value'))
 
-        let playerCardResult = parseInt(playerCard1.getAttribute('value'))
-        console.log(playerCardResult)
+         let playerCard1Result = parseInt(playerCard1.getAttribute('value'))
+         console.log(playerCardResult1)
     },
 
     setTable2: function () {
@@ -234,6 +234,8 @@ let setGamePlay = {
 
         const removeComputerChoiceImgCnt = document.querySelector('.computerChoiceImgCnt')
         removeComputerChoiceImgCnt.parentNode.removeChild(removeComputerChoiceImgCnt)
+
+
 
 
     },
@@ -259,104 +261,95 @@ let setGamePlay = {
             }
             //get it to show up on the DOM
             document.querySelector('.thirtySeconds').innerHTML = `Timer: ${timer2}s`
-        }, 1000)
+        }, 10)
     },
-
-    //coverImages: function(){
-
 
 
     //},
     imageClick: function () {
         const div1Click = document.querySelector('#div1')
-        div1Click.addEventListener('click', () => console.log('check check'))
+        div1Click.setAttribute('src', 'images/back.png')
+        div1Click.addEventListener('click', () =>  document.querySelector('#div1').setAttribute('src' , 'images/card' + setGamePlay.playerCard1Result + '.png' ))
 
         const div2Click = document.querySelector('#div2')
+        div2Click.setAttribute('src', 'images/back.png')
         div2Click.addEventListener('click', () => console.log('check check'))
 
         const div3Click = document.querySelector('#div3')
+        div3Click.setAttribute('src', 'images/back.png')
         div3Click.addEventListener('click', () => console.log('check check'))
 
         const div4Click = document.querySelector('#div4')
+        div4Click.setAttribute('src', 'images/back.png')
         div4Click.addEventListener('click', () => console.log('check check'))
 
         const div5Click = document.querySelector('#div5')
+        div5Click.setAttribute('src', 'images/back.png')
         div5Click.addEventListener('click', () => console.log('check check'))
 
         const div6Click = document.querySelector('#div6')
+        div6Click.setAttribute('src', 'images/back.png')
         div6Click.addEventListener('click', () => console.log('check check'))
 
         const div7Click = document.querySelector('#div7')
+        div7Click.setAttribute('src', 'images/back.png')
         div7Click.addEventListener('click', () => console.log('check check'))
 
         const div8Click = document.querySelector('#div8')
+        div8Click.setAttribute('src', 'images/back.png')
         div8Click.addEventListener('click', () => console.log('check check'))
 
         const div9Click = document.querySelector('#div9')
+        div9Click.setAttribute('src', 'images/back.png')
         div9Click.addEventListener('click', () => console.log('check check'))
 
         const div10Click = document.querySelector('#div10')
+        div10Click.setAttribute('src', 'images/back.png')
         div10Click.addEventListener('click', () => console.log('check check'))
 
         const div11Click = document.querySelector('#div11')
-        div1Click.addEventListener('click', () => console.log('check check'))
+        div11Click.setAttribute('src', 'images/back.png')
+        div11Click.addEventListener('click', () => console.log('check check'))
 
         const div12Click = document.querySelector('#div12')
+        div12Click.setAttribute('src', 'images/back.png')
         div12Click.addEventListener('click', () => console.log('check check'))
 
         const div13Click = document.querySelector('#div13')
+        div13Click.setAttribute('src', 'images/back.png')
         div13Click.addEventListener('click', () => console.log('check check'))
 
         const div14Click = document.querySelector('#div14')
-        div14Click.addEventListener('click', () => console.log('check check'))
+        div14Click.setAttribute('src', 'images/back.png')
+        div14Click.addEventListener('click', () => console.log(''))
 
         const div15Click = document.querySelector('#div15')
+        div15Click.setAttribute('src', 'images/back.png')
         div15Click.addEventListener('click', () => console.log('check check'))
 
         const div16Click = document.querySelector('#div16')
+        div16Click.setAttribute('src', 'images/back.png')
         div16Click.addEventListener('click', () => console.log('check check'))
 
         const div17Click = document.querySelector('#div17')
+        div17Click.setAttribute('src', 'images/back.png')
         div17Click.addEventListener('click', () => console.log('check check'))
 
         const div18Click = document.querySelector('#div18')
+        div18Click.setAttribute('src', 'images/back.png')
         div18Click.addEventListener('click', () => console.log('check check'))
 
-        
+
+    },
+
+    getValue: function () {
+        const getDiv1Value = document.getElementById('div1').getAttribute('value')
+        getDiv1Value.setAttribute('src' , `images/card${getDiv1Value}.png`)
     }
-
-
     //remember cpuCard Value
 
 }
 console.log(setGamePlay.getCards())
-
-
-
-
-/*
-       for (let i = 1; i <= 7; i++) {
-           const newCard = document.createElement('img')
-           newCard.setAttribute('src', 'images/back.png')
-           newCard.setAttribute('value', i)
-           newCard.value = i
-           this.rememberCards.push(newCard)
-           console.log(setGamePlay.rememberCards)
-       }
-       for (let j = 1; j < 7; j++){
-           const newCard2 = document.createElement('img')
-           newCard2.setAttribute('src' , 'images/back.png')
-           newCard2.setAttribute('value' , j)
-           newCard2.value = j
-           this.rememberCards.push(newCard2)
-           console.log(this.rememberCards)
-       }
-       */
-
-
-
-// The arangement of those cards to shuffle - arangementShuffle() ???
-// A timer of 15s to appear - setTimerRemember() ???
 
 
 document.querySelector('.startButton').addEventListener('click', () => { setGamePlay.clearPage(), setGamePlay.setTable(), setGamePlay.setInterval1(), setGamePlay.deal() })
@@ -367,6 +360,19 @@ document.querySelector('.startButton').addEventListener('click', () => { setGame
             // --This will shuffle through the array of cards and pick a random index.
             // --This is the card the player will have to find and what we will have to 
                 //compare to ??? playerChooser() ???
+
+
+
+/*
+const tester5 = document.getElementById('div1').getAttribute('value')
+
+const getDiv1Test = document.getElementById('div1')
+getDiv1Test.setAttribute('src' , `images/card${tester5}.png`)
+console.log(getDiv1Test)
+*/
+
+
+
 
 
 
