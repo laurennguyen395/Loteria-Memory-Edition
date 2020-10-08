@@ -62,7 +62,7 @@ let setGamePlay = {
                 computerChoiceImgCnt.setAttribute('value', cpuCardChoice.getAttribute('value'))
 
 
-                let cpuCardChoiceValue = parseInt(cpuCardChoice.getAttribute('value'))
+                cpuCardChoiceValue = parseInt(cpuCardChoice.getAttribute('value'))
                 cpuCardChoiceValueToString = cpuCardChoiceValue.toString()
 
 
@@ -94,7 +94,7 @@ let setGamePlay = {
             }
             //get it to show up on the DOM
             document.querySelector('.fifteenSeconds').innerHTML = `Timer: ${timer}s`
-        }, 1000)
+        }, 100)
     },
 
     setTable: function () {
@@ -343,7 +343,7 @@ let setGamePlay = {
         const timerInterval2 = setInterval(() => {
 
             if (timer2 === 0) {
-                alert('Game Over')
+                alert('GAME OVER! How did you do?')
 
                 clearInterval(timerInterval2)
 
@@ -360,121 +360,30 @@ let setGamePlay = {
     //},
 
     imageClick: function () {
-        const div1Click = document.querySelector('#div1')
-        div1Click.setAttribute('src', 'images/back.png')
-        div1Click.addEventListener('click', () => { document.querySelector('#div1').setAttribute('src', 'images/card' + playerCardResultString + '.png') }, this.compareValues())
-
-        const div2Click = document.querySelector('#div2')
-        div2Click.setAttribute('src', 'images/back.png')
-        div2Click.addEventListener('click', () => { document.querySelector('#div2').setAttribute('src', 'images/card' + playerCardResultString2 + '.png'), this.compareValues() })
-
-        const div3Click = document.querySelector('#div3')
-        div3Click.setAttribute('src', 'images/back.png')
-        div3Click.addEventListener('click', () => { document.querySelector('#div3').setAttribute('src', 'images/card' + playerCardResultString3 + '.png'), this.compareValues() })
-
-        const div4Click = document.querySelector('#div4')
-        div4Click.setAttribute('src', 'images/back.png')
-        div4Click.addEventListener('click', () => { document.querySelector('#div4').setAttribute('src', 'images/card' + playerCardResultString4 + '.png'), this.compareValues() })
-
-        const div5Click = document.querySelector('#div5')
-        div5Click.setAttribute('src', 'images/back.png')
-        div5Click.addEventListener('click', () => { document.querySelector('#div5').setAttribute('src', 'images/card' + playerCardResultString5 + '.png'), this.compareValues() })
-
-        const div6Click = document.querySelector('#div6')
-        div6Click.setAttribute('src', 'images/back.png')
-        div6Click.addEventListener('click', () => { document.querySelector('#div6').setAttribute('src', 'images/card' + playerCardResultString6 + '.png'), this.compareValues() })
-
-        const div7Click = document.querySelector('#div7')
-        div7Click.setAttribute('src', 'images/back.png')
-        div7Click.addEventListener('click', () => { document.querySelector('#div7').setAttribute('src', 'images/card' + playerCardResultString7 + '.png'), this.compareValues() })
-
-        const div8Click = document.querySelector('#div8')
-        div8Click.setAttribute('src', 'images/back.png')
-        div8Click.addEventListener('click', () => { document.querySelector('#div8').setAttribute('src', 'images/card' + playerCardResultString8 + '.png') , this.compareValues()})
-
-        const div9Click = document.querySelector('#div9')
-        div9Click.setAttribute('src', 'images/back.png')
-        div9Click.addEventListener('click', () => { document.querySelector('#div9').setAttribute('src', 'images/card' + playerCardResultString9 + '.png') , this.compareValues()})
-
-        const div10Click = document.querySelector('#div10')
-        div10Click.setAttribute('src', 'images/back.png')
-        div10Click.addEventListener('click', () => { document.querySelector('#div10').setAttribute('src', 'images/card' + playerCardResultString10 + '.png'), this.compareValues() })
-
-        const div11Click = document.querySelector('#div11')
-        div11Click.setAttribute('src', 'images/back.png')
-        div11Click.addEventListener('click', () => { document.querySelector('#div11').setAttribute('src', 'images/card' + playerCardResultString11 + '.png') , this.compareValues()})
-
-        const div12Click = document.querySelector('#div12')
-        div12Click.setAttribute('src', 'images/back.png')
-        div12Click.addEventListener('click', () => { document.querySelector('#div12').setAttribute('src', 'images/card' + playerCardResultString12 + '.png') , this.compareValues()})
-
-        const div13Click = document.querySelector('#div13')
-        div13Click.setAttribute('src', 'images/back.png')
-        div13Click.addEventListener('click', () => { document.querySelector('#div13').setAttribute('src', 'images/card' + playerCardResultString13 + '.png'), this.compareValues() })
-
-        const div14Click = document.querySelector('#div14')
-        div14Click.setAttribute('src', 'images/back.png')
-        div14Click.addEventListener('click', () => { document.querySelector('#div14').setAttribute('src', 'images/card' + playerCardResultString14 + '.png') , this.compareValues()})
-
-        const div15Click = document.querySelector('#div15')
-        div15Click.setAttribute('src', 'images/back.png')
-        div15Click.addEventListener('click', () => { document.querySelector('#div15').setAttribute('src', 'images/card' + playerCardResultString15 + '.png') , this.compareValues()})
-
-        const div16Click = document.querySelector('#div16')
-        div16Click.setAttribute('src', 'images/back.png')
-        div16Click.addEventListener('click', () => { document.querySelector('#div16').setAttribute('src', 'images/card' + playerCardResultString16 + '.png') , this.compareValues()})
-
-        const div17Click = document.querySelector('#div17')
-        div17Click.setAttribute('src', 'images/back.png')
-        div17Click.addEventListener('click', () => { document.querySelector('#div17').setAttribute('src', 'images/card' + playerCardResultString17 + '.png') , this.compareValues()})
-
-        const div18Click = document.querySelector('#div18')
-        div18Click.setAttribute('src', 'images/back.png')
-        div18Click.addEventListener('click', () => { document.querySelector('#div18').setAttribute('src', 'images/card' + playerCardResultString18 + '.png'), this.compareValues() })
-
+        for (let i = 1; i < 19; i++){
+            const div = document.querySelector(`#div${i}`)
+            div.setAttribute('src' , 'images/back.png')
+            div.addEventListener('click' , this.compareValues)
+        }
+        
 
     },
 
     //remember cpuCard Value
-    compareValues: function () {
-        if (cpuCardChoiceValueToString === playerCardResultString) {
-            console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString2) {
-        //     console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString3) {
-        //     console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString4) {
-        //     console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString5) {
-        //     console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString6) {
-        //     console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString7) {
-        //     console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString8) {
-        //     console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString9) {
-        //     console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString10) {
-        //     console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString11) {
-        //     console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString12) {
-        //     console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString13) {
-        //     console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString14) {
-        //     console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString15) {
-        //     console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString16) {
-        //     console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString17) {
-        //     console.log('ITS A MATCH')
-        // } else if (cpuCardChoiceValueToString === playerCardResultString18) {
-        //     console.log('ITS A MATCH')
+    compareValues: function (e) {
+        const playValue = e.target.getAttribute('value')
+        const playValueNum = parseInt(playValue)
+        e.target.setAttribute('src' , `images/card${playValueNum}.png`)
+        
+        console.log(cpuCardChoiceValue)
+        console.log(playValueNum)
+        if (cpuCardChoiceValue !== playValueNum) {
+            console.log('try again')
+            //set time out which will flip back
+            //play wrong sound
         } else {
-            console.log('TRY AGAIN')
+            console.log('its a match')
+            //play correct sound
         }
     }
 }
@@ -484,12 +393,7 @@ console.log(setGamePlay.getCards())
 
 document.querySelector('.startButton').addEventListener('click', () => { setGamePlay.clearPage(), setGamePlay.setTable(), setGamePlay.setInterval1(), setGamePlay.deal() })
 
-//setInterval2() ==> When setInterval1 === 0: 
-    // - ??? clearPage2
-    // - create a computer chooses function
-            // --This will shuffle through the array of cards and pick a random index.
-            // --This is the card the player will have to find and what we will have to 
-                //compare to ??? playerChooser() ???
+
 
 
 
