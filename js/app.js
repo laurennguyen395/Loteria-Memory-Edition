@@ -5,7 +5,7 @@ console.log('hello')
 
 let setGamePlay = {
     cpuChoice: 0,
-    
+
     clearPage: function () {
         const removeH1 = document.querySelector('h1')
         removeH1.parentNode.removeChild(removeH1)
@@ -19,7 +19,7 @@ let setGamePlay = {
         const removeP = document.querySelector('p')
         removeP.parentNode.removeChild(removeP)
     },
-    
+
     setInterval1: function () {
         const timerOne = document.createElement('p')
         timerOne.setAttribute('class', 'fifteenSeconds')
@@ -30,9 +30,9 @@ let setGamePlay = {
 
         let timer = 15
         const timerInterval = setInterval(() => {
-            
+
             if (timer === 0) {
-                
+
                 console.log('Find all of the card values')
 
                 const removeCont = document.querySelector('.container')
@@ -42,41 +42,41 @@ let setGamePlay = {
                 removeT.parentNode.removeChild(removeT)
 
                 const computerChooseP = document.createElement('p')
-                computerChooseP.setAttribute('class' , 'computerChooseP')
+                computerChooseP.setAttribute('class', 'computerChooseP')
                 document.body.appendChild(computerChooseP)
                 document.querySelector('.computerChooseP').innerHTML = 'Can you find all the:'
-                
+
                 const computerChoiceImgCnt = document.createElement('img')
-                computerChoiceImgCnt.setAttribute('class' , 'computerChoiceImgCnt')
-                computerChoiceImgCnt.setAttribute('id' , 'contianer1')
-                
+                computerChoiceImgCnt.setAttribute('class', 'computerChoiceImgCnt')
+                computerChoiceImgCnt.setAttribute('id', 'contianer1')
+
                 document.body.appendChild(computerChoiceImgCnt)
-                
-                        
+
+
                 const cpuCardChoice = this.rememberCards[Math.floor(Math.random() * this.rememberCards.length)]
-                computerChoiceImgCnt.setAttribute('src' , cpuCardChoice.getAttribute('src'))
+                computerChoiceImgCnt.setAttribute('src', cpuCardChoice.getAttribute('src'))
 
                 //NEXT STEPS: Loop through container, hide the cards add background color??
 
-                    
-/*            
-                    this.getCards()
-                    this.shuffle()
-                    let computerCard = setGamePlay.rememberCards.shift()
-                    computerChoiceImgCn.setAttribute('src', computerCard.getAttribute('src'))*/
-               
-                
+
+                /*            
+                                    this.getCards()
+                                    this.shuffle()
+                                    let computerCard = setGamePlay.rememberCards.shift()
+                                    computerChoiceImgCn.setAttribute('src', computerCard.getAttribute('src'))*/
+
+
 
 
                 const readyBtnContainer = document.querySelector('div')
-                readyBtnContainer.setAttribute('class' , 'readyBtnContainer')
+                readyBtnContainer.setAttribute('class', 'readyBtnContainer')
                 document.body.appendChild(readyBtnContainer)
-                
+
                 const readyButton = document.createElement('button')
-                readyButton.setAttribute('class' , 'readyButton')
+                readyButton.setAttribute('class', 'readyButton')
                 readyBtnContainer.appendChild(readyButton)
                 document.querySelector('.readyButton').innerHTML = 'Ready'
-                document.querySelector('.readyButton').addEventListener('click' , () => {setGamePlay.setTable2()})
+                document.querySelector('.readyButton').addEventListener('click', () => { setGamePlay.setTable2(), setGamePlay.setInterval2(), setGamePlay.imageClick() })
 
 
                 clearInterval(timerInterval)
@@ -91,7 +91,7 @@ let setGamePlay = {
             }
             //get it to show up on the DOM
             document.querySelector('.fifteenSeconds').innerHTML = `Timer: ${timer}s`
-        }, 100)
+        }, 10)
     },
 
     setTable: function () {
@@ -107,13 +107,13 @@ let setGamePlay = {
 
 
         //Setting each Div
-        for (let i = 0; i < 19; i++) {
+        for (let i = 1; i < 19; i++) {
             let div = document.createElement('img')
             div.setAttribute('class', 'cardContainer')
             div.setAttribute('id', 'div' + i)
             cardGrid.appendChild(div)
         }
-        
+
 
     },
     rememberCards: [],
@@ -123,6 +123,7 @@ let setGamePlay = {
             const newCard = document.createElement('img')
             newCard.setAttribute('src', 'images/card' + i + '.png')
             newCard.setAttribute('value', i)
+            newCard.value = i
             this.rememberCards.push(newCard)
             console.log(setGamePlay.rememberCards)
         }
@@ -138,7 +139,7 @@ let setGamePlay = {
     deal: function () {
         this.getCards()
         this.shuffle()
-        
+
         //for (let i =1; i < 19; i++) {
 
         //}
@@ -215,11 +216,11 @@ let setGamePlay = {
 
         div18.setAttribute('src', playerCard18.getAttribute('src'))
         div18.setAttribute('value', playerCard18.getAttribute('value'))
-    
+
         let playerCardResult = parseInt(playerCard1.getAttribute('value'))
         console.log(playerCardResult)
     },
-    
+
     setTable2: function () {
 
         const showCont = document.querySelector('.container')
@@ -234,18 +235,123 @@ let setGamePlay = {
         const removeComputerChoiceImgCnt = document.querySelector('.computerChoiceImgCnt')
         removeComputerChoiceImgCnt.parentNode.removeChild(removeComputerChoiceImgCnt)
 
+
+    },
+    setInterval2: function () {
+        const timerTwo = document.createElement('p')
+        timerTwo.setAttribute('class', 'thirtySeconds')
+        document.body.appendChild(timerTwo)
+        timerTwo.innerHTML = 'Timer: 30s'
+
+
+
+        let timer2 = 30
+        const timerInterval2 = setInterval(() => {
+
+            if (timer2 === 0) {
+
+
+                clearInterval(timerInterval2)
+
+            } else {
+                timer2--
+                console.log(timer2)
+            }
+            //get it to show up on the DOM
+            document.querySelector('.thirtySeconds').innerHTML = `Timer: ${timer2}s`
+        }, 1000)
+    },
+
+    //coverImages: function(){
+
+
+
+    //},
+    imageClick: function () {
+        const div1Click = document.querySelector('#div1')
+        div1Click.addEventListener('click', () => console.log('check check'))
+
+        const div2Click = document.querySelector('#div2')
+        div2Click.addEventListener('click', () => console.log('check check'))
+
+        const div3Click = document.querySelector('#div3')
+        div3Click.addEventListener('click', () => console.log('check check'))
+
+        const div4Click = document.querySelector('#div4')
+        div4Click.addEventListener('click', () => console.log('check check'))
+
+        const div5Click = document.querySelector('#div5')
+        div5Click.addEventListener('click', () => console.log('check check'))
+
+        const div6Click = document.querySelector('#div6')
+        div6Click.addEventListener('click', () => console.log('check check'))
+
+        const div7Click = document.querySelector('#div7')
+        div7Click.addEventListener('click', () => console.log('check check'))
+
+        const div8Click = document.querySelector('#div8')
+        div8Click.addEventListener('click', () => console.log('check check'))
+
+        const div9Click = document.querySelector('#div9')
+        div9Click.addEventListener('click', () => console.log('check check'))
+
+        const div10Click = document.querySelector('#div10')
+        div10Click.addEventListener('click', () => console.log('check check'))
+
+        const div11Click = document.querySelector('#div11')
+        div1Click.addEventListener('click', () => console.log('check check'))
+
+        const div12Click = document.querySelector('#div12')
+        div12Click.addEventListener('click', () => console.log('check check'))
+
+        const div13Click = document.querySelector('#div13')
+        div13Click.addEventListener('click', () => console.log('check check'))
+
+        const div14Click = document.querySelector('#div14')
+        div14Click.addEventListener('click', () => console.log('check check'))
+
+        const div15Click = document.querySelector('#div15')
+        div15Click.addEventListener('click', () => console.log('check check'))
+
+        const div16Click = document.querySelector('#div16')
+        div16Click.addEventListener('click', () => console.log('check check'))
+
+        const div17Click = document.querySelector('#div17')
+        div17Click.addEventListener('click', () => console.log('check check'))
+
+        const div18Click = document.querySelector('#div18')
+        div18Click.addEventListener('click', () => console.log('check check'))
+
+        
     }
-//remove hidden on ready button
-//remove cpu div
-//remember cpuCard Value
-    
+
+
+    //remember cpuCard Value
+
 }
 console.log(setGamePlay.getCards())
 
 
 
 
-
+/*
+       for (let i = 1; i <= 7; i++) {
+           const newCard = document.createElement('img')
+           newCard.setAttribute('src', 'images/back.png')
+           newCard.setAttribute('value', i)
+           newCard.value = i
+           this.rememberCards.push(newCard)
+           console.log(setGamePlay.rememberCards)
+       }
+       for (let j = 1; j < 7; j++){
+           const newCard2 = document.createElement('img')
+           newCard2.setAttribute('src' , 'images/back.png')
+           newCard2.setAttribute('value' , j)
+           newCard2.value = j
+           this.rememberCards.push(newCard2)
+           console.log(this.rememberCards)
+       }
+       */
 
 
 
@@ -261,16 +367,15 @@ document.querySelector('.startButton').addEventListener('click', () => { setGame
             // --This will shuffle through the array of cards and pick a random index.
             // --This is the card the player will have to find and what we will have to 
                 //compare to ??? playerChooser() ???
-    // - set a "Ready?" button
-    // - set an event listener to 
+
 
 
 /*
-    resetTable()
 
 
-    
-    computerChooser()
+
+
+
     playerWin(){
         if (playerCardResult === computerCardResult){
             --dont't flip card over
