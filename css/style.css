@@ -37,9 +37,12 @@ p{
     font-size: 25px;
 }
 .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     height: 800px;
     width: 1000px;
-    margin: 0px 500px
+    margin: 0px auto;
     max-width: 500px;
 }
 .parent {
@@ -176,6 +179,10 @@ p{
         border-color:aliceblue;
         height: 235px;
         width: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0px auto;
         
     }
     .readyButton{
