@@ -3,6 +3,8 @@ console.log('hello')
 
 // The landing page HTML to disapepar - setPage() ???
 
+let playerCardResult,playerCardResultString
+
 let setGamePlay = {
     cpuChoice: 0,
 
@@ -217,8 +219,10 @@ let setGamePlay = {
         div18.setAttribute('src', playerCard18.getAttribute('src'))
         div18.setAttribute('value', playerCard18.getAttribute('value'))
 
-         let playerCard1Result = parseInt(playerCard1.getAttribute('value'))
-         console.log(playerCardResult1)
+        playerCardResult = parseInt(playerCard1.getAttribute('value'))
+        console.log(typeof(playerCardResult))
+        playerCardResultString = playerCardResult.toString()
+        console.log(typeof(playerCardResultString))
     },
 
     setTable2: function () {
@@ -266,10 +270,11 @@ let setGamePlay = {
 
 
     //},
+
     imageClick: function () {
         const div1Click = document.querySelector('#div1')
         div1Click.setAttribute('src', 'images/back.png')
-        div1Click.addEventListener('click', () =>  document.querySelector('#div1').setAttribute('src' , 'images/card' + setGamePlay.playerCard1Result + '.png' ))
+        div1Click.addEventListener('click', () => { document.querySelector('#div1').setAttribute('src', 'images/card' + playerCardResultString + '.png') })
 
         const div2Click = document.querySelector('#div2')
         div2Click.setAttribute('src', 'images/back.png')
@@ -350,6 +355,7 @@ let setGamePlay = {
 
 }
 console.log(setGamePlay.getCards())
+
 
 
 document.querySelector('.startButton').addEventListener('click', () => { setGamePlay.clearPage(), setGamePlay.setTable(), setGamePlay.setInterval1(), setGamePlay.deal() })
