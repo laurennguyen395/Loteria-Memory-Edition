@@ -3,7 +3,9 @@ console.log('hello')
 
 // The landing page HTML to disapepar - setPage() ???
 
-let playerCardResultString, playerCardResultString2, playerCardResultString18, playerCardResult, cpuCardChoiceValue
+let playerCardResultString, playerCardResultString2, playerCardResult, cpuCardChoiceValue
+const correctSound = new Audio('assets/ding.wav')
+const wrongSound = new Audio('assets/error.wav')
 
 let setGamePlay = {
     cpuChoice: 0,
@@ -343,7 +345,9 @@ let setGamePlay = {
         const timerInterval2 = setInterval(() => {
 
             if (timer2 === 0) {
-                alert('GAME OVER! How did you do?')
+                
+                
+                //alert('GAME OVER! How did you do?')
 
                 clearInterval(timerInterval2)
 
@@ -353,40 +357,48 @@ let setGamePlay = {
             }
             //get it to show up on the DOM
             document.querySelector('.thirtySeconds').innerHTML = `Timer: ${timer2}s`
-        }, 1000)
+        }, 100)
     },
 
 
     //},
 
     imageClick: function () {
-        for (let i = 1; i < 19; i++){
+        for (let i = 1; i < 19; i++) {
             const div = document.querySelector(`#div${i}`)
-            div.setAttribute('src' , 'images/back.png')
-            div.addEventListener('click' , this.compareValues)
+            div.setAttribute('src', 'images/back.png')
+            div.addEventListener('click', this.compareValues)
         }
-        
+    },
+    playSound1: function () {
+        correctSound.play()
 
     },
-
+    playSound2: function () {
+        wrongSound.play()
+    },
     //remember cpuCard Value
     compareValues: function (e) {
         const playValue = e.target.getAttribute('value')
         const playValueNum = parseInt(playValue)
-        e.target.setAttribute('src' , `images/card${playValueNum}.png`)
-        
+        e.target.setAttribute('src', `images/card${playValueNum}.png`)
         console.log(cpuCardChoiceValue)
         console.log(playValueNum)
         if (cpuCardChoiceValue !== playValueNum) {
             console.log('try again')
+            setGamePlay.playSound2()
+            setTimeout(function () { setGamePlay.imageClick() }, 800);
             //set time out which will flip back
             //play wrong sound
         } else {
             console.log('its a match')
-            //play correct sound
+            setGamePlay.playSound1()
+
         }
+        //play correct sound
     }
 }
+
 console.log(setGamePlay.getCards())
 
 
