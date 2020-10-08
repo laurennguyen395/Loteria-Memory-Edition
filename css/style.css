@@ -2,6 +2,7 @@
 body {
     background: radial-gradient(rgb(19, 114, 128),rgb(235, 240, 235));
     margin-top: auto;
+    font-family: 'Cinzel', serif;
   }
 
 .startButton {
@@ -10,7 +11,7 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 40px;
-    margin: 20px;
+    margin: 60px auto 80px auto;
     transition: all 0.5s ease-in-out;
     font-size: 45px;
     color: rgb(118, 152, 157); 
@@ -24,17 +25,23 @@ h3 {
     margin-top: 0;
     color: aliceblue;
     text-align: center;
+    margin: 0px auto 80px auto;
 }
 h1{
     font-size: 85px;
     color: aliceblue;
-    margin-bottom: 0px;
+    margin: 125px auto 0px auto;
     text-align: center;
 }
 p{
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     color: aliceblue;
     font-size: 25px;
+    max-width: 500px;
+    margin: 60px auto;
+    text-align: center;
 }
 .container {
     display: flex;
@@ -207,6 +214,9 @@ p{
     .fifteenSeconds{
         text-align: center;
     }
+    .computerChooseP{
+        font-size: 50px;
+    }
     .computerChoiceImgCnt{
         border: dotted;
         border-color:aliceblue;
@@ -215,7 +225,7 @@ p{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin: 0px auto;
+        margin: 80px auto;
         box-shadow: 10px 10px 8px #eeebeb;
     }
     .readyButton{
@@ -224,7 +234,7 @@ p{
     border: none;
     cursor: pointer;
     border-radius: 40px;
-    margin: 20px;
+    margin: 80px auto;
     transition: all 0.5s ease-in-out;
     font-size: 45px;
     color: rgb(118, 152, 157); 
