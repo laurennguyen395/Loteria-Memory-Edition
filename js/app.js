@@ -318,6 +318,7 @@ let setGamePlay = {
         const doneButton = document.createElement('button')
         doneButton.setAttribute('class', 'doneButton')
         document.body.appendChild(doneButton)
+        document.querySelector('.doneButton').innerHTML = 'Done'
     },
     setTable2: function () {
 
@@ -332,10 +333,6 @@ let setGamePlay = {
 
         const removeComputerChoiceImgCnt = document.querySelector('.computerChoiceImgCnt')
         removeComputerChoiceImgCnt.parentNode.removeChild(removeComputerChoiceImgCnt)
-
-
-
-
     },
     setInterval2: function () {
         const timerTwo = document.createElement('p')
