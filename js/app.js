@@ -3,7 +3,7 @@ console.log('hello')
 
 // The landing page HTML to disapepar - setPage() ???
 
-let playerCardResultString, playerCardResultString2, playerCardResult, cpuCardChoiceValue
+let playerCardResultString, playerCardResultString2, playerCardResult, cpuCardChoiceValue, timerInterval2
 const correctSound = new Audio('assets/ding.wav')
 const wrongSound = new Audio('assets/error.wav')
 
@@ -57,7 +57,7 @@ let setGamePlay = {
                 document.body.appendChild(computerChoiceImgCnt)
 
                 const instructions = document.createElement('p')
-                instructions.setAttribute('class' , 'instructions')
+                instructions.setAttribute('class', 'instructions')
                 document.body.appendChild(instructions)
                 document.querySelector('.instructions').innerHTML = 'Choose wisely, if you mess up, you start over. Hit done when you think you got them all. Good luck.'
 
@@ -85,7 +85,7 @@ let setGamePlay = {
                 readyButton.setAttribute('class', 'readyButton')
                 readyBtnContainer.appendChild(readyButton)
                 document.querySelector('.readyButton').innerHTML = 'Ready'
-                document.querySelector('.readyButton').addEventListener('click', () => { setGamePlay.setTable2(), setGamePlay.setInterval2(), setGamePlay.imageClick(), setGamePlay.setDoneButton(), setGamePlay.clearInstructionsParagraph()})
+                document.querySelector('.readyButton').addEventListener('click', () => { setGamePlay.setTable2(), setGamePlay.setInterval2(), setGamePlay.imageClick(), setGamePlay.setDoneButton(), setGamePlay.clearInstructionsParagraph() })
 
 
                 clearInterval(timerInterval)
@@ -100,7 +100,7 @@ let setGamePlay = {
             }
             //get it to show up on the DOM
             document.querySelector('.fifteenSeconds').innerHTML = `Timer: ${timer}s`
-        }, 1000)
+        }, 10)
     },
     clearInstructionsParagraph: function () {
         const removeInstructions = document.querySelector('.instructions')
@@ -326,15 +326,17 @@ let setGamePlay = {
         doneButton.setAttribute('class', 'doneButton')
         document.body.appendChild(doneButton)
         document.querySelector('.doneButton').innerHTML = 'Done'
-        document.querySelector('.doneButton').addEventListener('click' , () => setGamePlay.displayAllCards())
+        document.querySelector('.doneButton').addEventListener('click', () => setGamePlay.displayAllCards())
     },
     displayAllCards: function () {
         const selectAllCards = document.querySelectorAll('.cardContainer')
         for (let i = 0; i < selectAllCards.length; i++) {
             //console.log(selectAllCards[i])
             //console.log(selectAllCards[i].getAttribute('value'))
-            selectAllCards[i].setAttribute('src' , `images/card${selectAllCards[i].getAttribute('value')}.png`)
-    }
+            selectAllCards[i].setAttribute('src', `images/card${selectAllCards[i].getAttribute('value')}.png`)
+        }
+            document.querySelector('.thirtySeconds').innerHTML = `Timer: 0s`
+            clearInterval(timerInterval2)
     },
     setTable2: function () {
 
@@ -359,7 +361,7 @@ let setGamePlay = {
 
 
         let timer2 = 30
-        const timerInterval2 = setInterval(() => {
+        timerInterval2 = setInterval(() => {
 
             if (timer2 === 0) {
 
@@ -415,9 +417,9 @@ let setGamePlay = {
         }
         //play correct sound
     },
-    
-   
-   }
+
+
+}
 
 console.log(setGamePlay.getCards())
 

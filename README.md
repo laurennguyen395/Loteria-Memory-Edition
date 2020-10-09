@@ -27,7 +27,7 @@ Remember where images lay on the grid of cards and how many there are. Click the
 * After 15 seconds the computer will choose a card for the player to have to find.
 
 * The player must flip over all cards of the specific image asked for and hit "Done". They have 30 seconds.
-git add r
+
 * Once they hit done, all the cards will reveal their images and the player will be able to see if they missed any.
 
 ## Technologies Used
@@ -45,5 +45,4 @@ git add r
 ## Future Development
 * Create a function that counts how many correct cards there are on the bpard and tally up the total as the play clicks the correct card.
 * Animate the flip of the card. 
-* Get timer to change to 0 when the done button is clicked.
 * Subtract 3 seconds from the time when a player chooses the incorrect card.
