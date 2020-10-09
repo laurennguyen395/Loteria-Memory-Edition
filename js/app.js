@@ -85,7 +85,7 @@ let setGamePlay = {
                 readyButton.setAttribute('class', 'readyButton')
                 readyBtnContainer.appendChild(readyButton)
                 document.querySelector('.readyButton').innerHTML = 'Ready'
-                document.querySelector('.readyButton').addEventListener('click', () => { setGamePlay.setTable2(), setGamePlay.setInterval2(), setGamePlay.imageClick(), setGamePlay.setDoneButton(), setGamePlay.clearInstructionsParagraph() })
+                document.querySelector('.readyButton').addEventListener('click', () => { setGamePlay.setTable2(), setGamePlay.setInterval2(), setGamePlay.imageClick(), setGamePlay.setDoneButton(), setGamePlay.clearInstructionsParagraph()})
 
 
                 clearInterval(timerInterval)
@@ -334,9 +334,8 @@ let setGamePlay = {
             //console.log(selectAllCards[i])
             //console.log(selectAllCards[i].getAttribute('value'))
             selectAllCards[i].setAttribute('src' , `images/card${selectAllCards[i].getAttribute('value')}.png`)
-        }
+    }
     },
-
     setTable2: function () {
 
         const showCont = document.querySelector('.container')
