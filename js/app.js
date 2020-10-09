@@ -3,7 +3,7 @@ console.log('hello')
 
 // The landing page HTML to disapepar - setPage() ???
 
-let playerCardResultString, playerCardResultString2, playerCardResult, cpuCardChoiceValue, timerInterval2
+let playerCardResultString, playerCardResultString2, playerCardResult, cpuCardChoiceValue, timerInterval2, timer2
 const correctSound = new Audio('assets/ding.wav')
 const wrongSound = new Audio('assets/error.wav')
 
@@ -360,7 +360,7 @@ let setGamePlay = {
 
 
 
-        let timer2 = 30
+        timer2 = 30
         timerInterval2 = setInterval(() => {
 
             if (timer2 === 0) {
@@ -413,6 +413,7 @@ let setGamePlay = {
             //console.log('try again')
             setGamePlay.playSound2()
             setTimeout(function () { setGamePlay.imageClick() }, 800);
+            timer2-- * 3
 
         }
         //play correct sound
