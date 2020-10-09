@@ -45,4 +45,3 @@ Remember where images lay on the grid of cards and how many there are. Click the
 ## Future Development
 * Create a function that counts how many correct cards there are on the bpard and tally up the total as the play clicks the correct card.
 * Animate the flip of the card. 
-* Subtract 3 seconds from the time when a player chooses the incorrect card.
