@@ -6,6 +6,8 @@ The origin of lotería can be traced far back in history. The game originated in
 
 ![wireframe 1](wireframe-planning/wireframe.png)
 ![Landing Page](wireframe-planning/landingpage.png)
+![memory board](wireframe-planning/memoryBoard.png)
+![game play](ireframe-planning/gameplay.png)
 
 ## Instructions
 
