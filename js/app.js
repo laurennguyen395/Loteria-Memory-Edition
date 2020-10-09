@@ -100,7 +100,7 @@ let setGamePlay = {
             }
             //get it to show up on the DOM
             document.querySelector('.fifteenSeconds').innerHTML = `Timer: ${timer}s`
-        }, 10)
+        }, 1000)
     },
     clearInstructionsParagraph: function () {
         const removeInstructions = document.querySelector('.instructions')
