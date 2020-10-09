@@ -6,11 +6,13 @@ The origin of lotería can be traced far back in history. The game originated in
 ## Motivation
 This game was made for my grandma, it is her favorite game, and after her being diagnosed with cancer I wanted to be able to create a new type of game for her to play with the same classic feel.
 
-## Screen Grabs
+## Wireframe
 ![wireframe 1](wireframe-planning/wireframe.png)
+
+## Screen Grabs
 ![Landing Page](wireframe-planning/landingpage.png)
 ![memory board](wireframe-planning/memoryBoard.png)
-![game play](ireframe-planning/gameplay.png)
+![game play](wireframe-planning/gameplay.png)
 
 ## Instructions
 
