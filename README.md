@@ -43,5 +43,6 @@ Remember where images lay on the grid of cards and how many there are. Click the
 * Fellow SEIR-921 students and faculty
 
 ## Future Development
-* Create a function that counts how many correct cards there are on the bpard and tally up the total as the play clicks the correct card.
+* Create a function that counts how many correct cards there are on the board and tally up the total as the play clicks the correct card.
 * Animate the flip of the card. 
+* Create media queries to allow game play on any size screen.
