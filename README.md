@@ -1,4 +1,4 @@
-# Loteria Memory Game
+# Loteria Memory Edition
 
 ## Loteria Game History
 The origin of lotería can be traced far back in history. The game originated in Italy in the 15th century and was brought to New Spain (modern Mexico) in 1769. In the beginning, lotería was a hobby of the upper classes, but eventually it became a tradition at Mexican fairs.
@@ -48,3 +48,6 @@ Remember where images lay on the grid of cards and how many there are. Click the
 * Create a function that counts how many correct cards there are on the board and tally up the total as the play clicks the correct card.
 * Animate the flip of the card. 
 * Create media queries to allow game play on any size screen.
+
+## Go To Site Live
+https://laurennguyen395.github.io/Project-1/.
