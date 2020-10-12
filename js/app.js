@@ -1,7 +1,5 @@
 console.log('hello')
-// When start button is pushed we need:
 
-// The landing page HTML to disapepar - setPage() ???
 
 let playerCardResultString, playerCardResultString2, playerCardResult, cpuCardChoiceValue, timerInterval2, timer2
 const correctSound = new Audio('assets/ding.wav')
@@ -120,10 +118,10 @@ let setGamePlay = {
 
         //Setting each Div
         for (let i = 1; i < 19; i++) {
-            let div = document.createElement('img')
-            div.setAttribute('class', 'cardContainer')
-            div.setAttribute('id', 'div' + i)
-            cardGrid.appendChild(div)
+            let img = document.createElement('img')
+            img.setAttribute('class', 'cardContainer')
+            img.setAttribute('id', 'img' + i)
+            cardGrid.appendChild(img)
         }
 
 
@@ -175,59 +173,59 @@ let setGamePlay = {
         let playerCard17 = setGamePlay.rememberCards.shift()
         let playerCard18 = setGamePlay.rememberCards.shift()
 
-        div1.setAttribute('src', playerCard1.getAttribute('src'))
-        div1.setAttribute('value', playerCard1.getAttribute('value'))
+        img1.setAttribute('src', playerCard1.getAttribute('src'))
+        img1.setAttribute('value', playerCard1.getAttribute('value'))
 
-        div2.setAttribute('src', playerCard2.getAttribute('src'))
-        div2.setAttribute('value', playerCard2.getAttribute('value'))
+        img2.setAttribute('src', playerCard2.getAttribute('src'))
+        img2.setAttribute('value', playerCard2.getAttribute('value'))
 
-        div3.setAttribute('src', playerCard3.getAttribute('src'))
-        div3.setAttribute('value', playerCard3.getAttribute('value'))
+        img3.setAttribute('src', playerCard3.getAttribute('src'))
+        img3.setAttribute('value', playerCard3.getAttribute('value'))
 
-        div4.setAttribute('src', playerCard4.getAttribute('src'))
-        div4.setAttribute('value', playerCard4.getAttribute('value'))
+        img4.setAttribute('src', playerCard4.getAttribute('src'))
+        img4.setAttribute('value', playerCard4.getAttribute('value'))
 
-        div5.setAttribute('src', playerCard5.getAttribute('src'))
-        div5.setAttribute('value', playerCard5.getAttribute('value'))
+        img5.setAttribute('src', playerCard5.getAttribute('src'))
+        img5.setAttribute('value', playerCard5.getAttribute('value'))
 
-        div6.setAttribute('src', playerCard6.getAttribute('src'))
-        div6.setAttribute('value', playerCard6.getAttribute('value'))
+        img6.setAttribute('src', playerCard6.getAttribute('src'))
+        img6.setAttribute('value', playerCard6.getAttribute('value'))
 
-        div7.setAttribute('src', playerCard7.getAttribute('src'))
-        div7.setAttribute('value', playerCard7.getAttribute('value'))
+        img7.setAttribute('src', playerCard7.getAttribute('src'))
+        img7.setAttribute('value', playerCard7.getAttribute('value'))
 
-        div8.setAttribute('src', playerCard8.getAttribute('src'))
-        div8.setAttribute('value', playerCard8.getAttribute('value'))
+        img8.setAttribute('src', playerCard8.getAttribute('src'))
+        img8.setAttribute('value', playerCard8.getAttribute('value'))
 
-        div9.setAttribute('src', playerCard9.getAttribute('src'))
-        div9.setAttribute('value', playerCard9.getAttribute('value'))
+        img9.setAttribute('src', playerCard9.getAttribute('src'))
+        img9.setAttribute('value', playerCard9.getAttribute('value'))
 
-        div10.setAttribute('src', playerCard10.getAttribute('src'))
-        div10.setAttribute('value', playerCard10.getAttribute('value'))
+        img10.setAttribute('src', playerCard10.getAttribute('src'))
+        img10.setAttribute('value', playerCard10.getAttribute('value'))
 
-        div11.setAttribute('src', playerCard11.getAttribute('src'))
-        div11.setAttribute('value', playerCard11.getAttribute('value'))
+        img11.setAttribute('src', playerCard11.getAttribute('src'))
+        img11.setAttribute('value', playerCard11.getAttribute('value'))
 
-        div12.setAttribute('src', playerCard12.getAttribute('src'))
-        div12.setAttribute('value', playerCard13.getAttribute('value'))
+        img12.setAttribute('src', playerCard12.getAttribute('src'))
+        img12.setAttribute('value', playerCard13.getAttribute('value'))
 
-        div13.setAttribute('src', playerCard13.getAttribute('src'))
-        div13.setAttribute('value', playerCard13.getAttribute('value'))
+        img13.setAttribute('src', playerCard13.getAttribute('src'))
+        img13.setAttribute('value', playerCard13.getAttribute('value'))
 
-        div14.setAttribute('src', playerCard14.getAttribute('src'))
-        div14.setAttribute('value', playerCard14.getAttribute('value'))
+        img14.setAttribute('src', playerCard14.getAttribute('src'))
+        img14.setAttribute('value', playerCard14.getAttribute('value'))
 
-        div15.setAttribute('src', playerCard15.getAttribute('src'))
-        div15.setAttribute('value', playerCard15.getAttribute('value'))
+        img15.setAttribute('src', playerCard15.getAttribute('src'))
+        img15.setAttribute('value', playerCard15.getAttribute('value'))
 
-        div16.setAttribute('src', playerCard16.getAttribute('src'))
-        div16.setAttribute('value', playerCard16.getAttribute('value'))
+        img16.setAttribute('src', playerCard16.getAttribute('src'))
+        img16.setAttribute('value', playerCard16.getAttribute('value'))
 
-        div17.setAttribute('src', playerCard17.getAttribute('src'))
-        div17.setAttribute('value', playerCard17.getAttribute('value'))
+        img17.setAttribute('src', playerCard17.getAttribute('src'))
+        img17.setAttribute('value', playerCard17.getAttribute('value'))
 
-        div18.setAttribute('src', playerCard18.getAttribute('src'))
-        div18.setAttribute('value', playerCard18.getAttribute('value'))
+        img18.setAttribute('src', playerCard18.getAttribute('src'))
+        img18.setAttribute('value', playerCard18.getAttribute('value'))
 
 
 
@@ -384,7 +382,7 @@ let setGamePlay = {
 
     imageClick: function () {
         for (let i = 1; i < 19; i++) {
-            const div = document.querySelector(`#div${i}`)
+            const div = document.querySelector(`#img${i}`)
             div.setAttribute('src', 'images/back.png')
             div.addEventListener('click', this.compareValues)
         }
@@ -418,8 +416,6 @@ let setGamePlay = {
         }
         //play correct sound
     },
-
-
 }
 
 console.log(setGamePlay.getCards())
@@ -428,48 +424,6 @@ console.log(setGamePlay.getCards())
 //START BUTTON
 document.querySelector('.startButton').addEventListener('click', () => { setGamePlay.clearPage(), setGamePlay.setTable(), setGamePlay.setInterval1(), setGamePlay.deal() })
 
-
-
-
-
-
-/*
-const tester5 = document.getElementById('div1').getAttribute('value')
-
-const getDiv1Test = document.getElementById('div1')
-getDiv1Test.setAttribute('src' , `images/card${tester5}.png`)
-console.log(getDiv1Test)
-*/
-
-
-
-
-
-
-/*
-
-
-
-
-
-    playerWin(){
-        if (playerCardResult === computerCardResult){
-            --dont't flip card over
-        } else {
-            --flip card over
-            --subtract 3s from timer2
-        }
-    }
-
-
-    playerLose(){
-        if (timer2 === 0) {
-            console.log
-        }
-    }
-
-    flip()
-    */
 
 
 
