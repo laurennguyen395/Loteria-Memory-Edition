@@ -50,4 +50,4 @@ Remember where images lay on the grid of cards and how many there are. Click the
 * Create media queries to allow game play on any size screen.
 
 ## Go To Site Live
-https://laurennguyen395.github.io/Project-1/.
+https://laurennguyen395.github.io/Loteria-Memory-Edition/
